@@ -1,7 +1,6 @@
 const config = require('./src/config');
 
 module.exports = {
-  pathPrefix: '/devendra116.github.io',
   siteMetadata: {
     title: 'Devendra Chauhan',
     description:
