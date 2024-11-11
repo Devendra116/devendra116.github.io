@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '3'
 title: 'YogaGuru'
 cover: './yogaguru.png'
 github: 'https://github.com/Devendra116/YogaGuru'

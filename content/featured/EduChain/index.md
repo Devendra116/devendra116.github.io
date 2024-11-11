@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2'
 title: 'EduChain'
 cover: './educhain.png'
 github: 'https://github.com/Devendra116/EduChain'
