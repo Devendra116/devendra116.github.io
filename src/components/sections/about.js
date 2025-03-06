@@ -125,7 +125,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Cosmos', 'Near Protocol', 'Rust', 'Python', 'JavaScript', 'Node.js'];
+  const skills = [
+    'Cosmos',
+    'EVM',
+    'Near Protocol',
+    'Rust',
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'Node.js',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -143,7 +152,7 @@ const About = () => {
             <p>
               I am a lighthearted guy with a strong passion for Blockchain and Decentralization, and
               I have experience working with startups on projects related to DeFi, P2P OrderBook
-              Dex, NFTs, and more on <a href="https://near.org/">Near Protocol</a> &{' '}
+              Dex, NFTs, and more on EVM chains, <a href="https://near.org/">Near Protocol</a> &{' '}
               <a href="https://cosmos.network/">Cosmos</a> Blockchain.
             </p>
             <p>
