@@ -32,7 +32,7 @@ const Side = ({ children, isHome, orientation }) => {
     if (!isHome || prefersReducedMotion) {
       return;
     }
-    const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
+    const timeout = setTimeout(() => setIsMounted(true), 0);
     return () => clearTimeout(timeout);
   }, []);
 
