@@ -161,21 +161,32 @@ const Nav = ({ isHome }) => {
   };
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      setIsMounted(true);
-    }, 0);
-
     window.addEventListener('scroll', handleScroll);
 
+    if (prefersReducedMotion) {
+      setIsMounted(true);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+
+    // Use requestAnimationFrame to ensure DOM is ready before mounting
+    // This prevents layout shifts on hard reload when fonts/styles aren't ready
+    let rafId2 = null;
+    const rafId1 = requestAnimationFrame(() => {
+      rafId2 = requestAnimationFrame(() => {
+        setIsMounted(true);
+      });
+    });
+
     return () => {
-      clearTimeout(timeout);
+      cancelAnimationFrame(rafId1);
+      if (rafId2) {
+        cancelAnimationFrame(rafId2);
+      }
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   const timeout = isHome ? loaderDelay : 0;
   const fadeClass = isHome ? 'fade' : '';
@@ -235,46 +246,59 @@ const Nav = ({ isHome }) => {
         ) : (
           <>
             <TransitionGroup component={null}>
-              {isMounted && (
+              {isMounted ? (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
                   <>{Logo}</>
                 </CSSTransition>
+              ) : (
+                <div style={{ opacity: 0, visibility: 'hidden' }}>{Logo}</div>
               )}
             </TransitionGroup>
 
             <StyledLinks>
               <ol>
                 <TransitionGroup component={null}>
-                  {isMounted &&
-                    navLinks &&
-                    navLinks.map(({ url, name }, i) => (
-                      <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                        <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                  {navLinks &&
+                    navLinks.map(({ url, name }, i) =>
+                      isMounted ? (
+                        <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
+                          <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                            <Link to={url}>{name}</Link>
+                          </li>
+                        </CSSTransition>
+                      ) : (
+                        <li key={i} style={{ opacity: 0, visibility: 'hidden' }}>
                           <Link to={url}>{name}</Link>
                         </li>
-                      </CSSTransition>
-                    ))}
+                      ),
+                    )}
                 </TransitionGroup>
               </ol>
 
               <TransitionGroup component={null}>
-                {isMounted && (
+                {isMounted ? (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                     <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
                       {ResumeLink}
                     </div>
                   </CSSTransition>
+                ) : (
+                  <div style={{ opacity: 0, visibility: 'hidden' }}>{ResumeLink}</div>
                 )}
               </TransitionGroup>
             </StyledLinks>
 
-            <TransitionGroup component={null}>
-              {isMounted && (
+            {isMounted ? (
+              <TransitionGroup component={null}>
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
                   <Menu />
                 </CSSTransition>
-              )}
-            </TransitionGroup>
+              </TransitionGroup>
+            ) : (
+              <div style={{ opacity: 0, visibility: 'hidden', pointerEvents: 'none' }}>
+                <Menu />
+              </div>
+            )}
           </>
         )}
       </StyledNav>
