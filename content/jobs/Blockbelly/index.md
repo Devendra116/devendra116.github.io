@@ -7,6 +7,6 @@ range: 'April 2022 - Sept 2022'
 url: 'https://www.blockbelly.com'
 ---
 
-- Lead the Decentralized Finance (DeFi) Team to build on [NEAR Protocol](https://near.org/) Blockchain.
-- Build smart contract for creating and managing the Indexes.
-- Writing code in Rust language, calling Exchange methods via cross contract calls, and more.
+- Worked with the DeFi team to build index management protocols on [NEAR Protocol](https://near.org/).
+- Built smart contracts in Rust for creating and managing tokenized indexes.
+- Integrated smart contracts with decentralized exchanges using cross-contract calls and async patterns.

@@ -13,7 +13,7 @@ tech:
   - Bootstrap
   - News API
 # company: ''
-showInProjects: True
+showInProjects: False
 ---
 
 A platform to share updates and news about the happenings in the local area, allows people to connect & discuss, provide the latest news, and give information about nearby places based on their area pincode.

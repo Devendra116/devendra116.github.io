@@ -7,7 +7,7 @@ range: 'Mar 2023 - Aug 2023'
 url: 'https://qstn.us/'
 ---
 
-- Developed and deployed a Rust-based NFT smart contract compatible with Paras NFT Marketplace, Mintbase Marketplace, and Few and Far Marketplace, incorporating advanced features like royalties and custom constraints.
-- Integrated four secure wallet options to ensure seamless user experience and secure transactions within the NFT marketplace.
-- Successfully launched and maintained a collection of 1,000 NFTs and also Implemented Stripe payments integration
-- Managed Backend developement with TypeScript, NodeJs, MongoDB, Vercel hosting, Github Codespaces, and Performed Unit Testing using Jest
+- Developed and deployed a Rust-based NFT smart contract compatible with Paras, Mintbase, and Few and Far marketplaces, with features like royalties and custom minting constraints.
+- Integrated four wallet options to provide a smooth user experience for transactions.
+- Built backend using TypeScript, Node.js, and MongoDB, set up CI/CD, and wrote tests with Jest. Successfully launched a collection of 1,000 NFTs.
+- Integrated Stripe payments for fiat-to-crypto conversions.

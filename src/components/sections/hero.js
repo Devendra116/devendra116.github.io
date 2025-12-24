@@ -61,25 +61,12 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Devendra Chauhan</h2>;
-  const three = <h3 className="big-heading">I build Practical Systems</h3>;
+  const three = <h3 className="big-heading">I build practical systems</h3>;
   const four = (
     <>
-      {/* <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
-      </p> */}
-      {/* <p>
-        I'm an software engineer specializing in building seamless Backend and Smart Contracts. Currently, I'm focused on building solution to web3 problems across multiple Chains 
-      </p> */}
       <p>
-        Experienced software engineer specializing in seamless backend and smart contract
-        development, with a current focus on building impactful solutions to Web3 challenges across
-        multiple blockchains.
+        Experienced software engineer building reliable backend and smart contract systems for
+        multi-chain Web3 applications{' '}
       </p>
     </>
   );

@@ -126,14 +126,16 @@ const About = () => {
   }, []);
 
   const skills = [
-    'Cosmos',
-    'EVM',
-    'Near Protocol',
+    'Solidity',
     'Rust',
-    'Python',
-    'JavaScript',
+    'EVM',
+    'Cosmos',
+    'Near Protocol',
     'TypeScript',
+    'JavaScript',
     'Node.js',
+    'Python',
+    'AI Agents',
   ];
 
   return (
@@ -144,34 +146,26 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Devendra Chauhan, and I enjoy tinkering with software to build
-              things that make sense in their existence. Whether it's a solution to critical
-              problems or a random joke generator to provide a momentary escape, I find fulfillment
-              in the creative process.
+              Hello! I'm Devendra, and I enjoy building software that solves real problems. Whether
+              it's a DeFi protocol or a side project that brings an idea to life, I find fulfillment
+              in the process of creating something useful.
             </p>
             <p>
-              I am a lighthearted guy with a strong passion for Blockchain and Decentralization, and
-              I have experience working with startups on projects related to DeFi, P2P OrderBook
-              Dex, NFTs, and more on EVM chains, <a href="https://near.org/">Near Protocol</a> &{' '}
-              <a href="https://cosmos.network/">Cosmos</a> Blockchain.
+              I'm passionate about blockchain and decentralization, and I've had the opportunity to
+              work with startups building DeFi protocols, P2P order book DEXs, NFTs, and cross-chain
+              infrastructure on <span style={{ color: 'var(--green)' }}>EVM</span>,{' '}
+              <span style={{ color: 'var(--green)' }}>Cosmos</span> and{' '}
+              <span style={{ color: 'var(--green)' }}>Near Protocol</span>. I focus on writing
+              clean, secure code and building systems that are both functional and maintainable.
             </p>
             <p>
-              In my free time, you will find me crafting dummy projects, bringing my thoughts to
-              reality. Additionally, I enjoy reading about Philosophy and exploring the web for new
-              technology.
-            </p>
-            <p>
-              I occasionally write at <a href="https://musingledger.substack.com/">Musing Ledger</a>
+              When I'm not working, I like to experiment with new technologies and work on side
+              projects. I also enjoy reading about philosophy and exploring what's happening in the
+              Web3 space. I occasionally write about my learnings at{' '}
+              <a href="https://musingledger.substack.com/">Musing Ledger</a>.
             </p>
 
-            {/* <p>
-              {' '}
-              <a href="https://www.">
-                link
-              </a>
-            </p> */}
-
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">

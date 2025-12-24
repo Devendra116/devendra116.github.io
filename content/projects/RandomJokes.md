@@ -8,7 +8,7 @@ tech:
   - BOS component
   - React
 # company: ''
-showInProjects: True
+showInProjects: False
 ---
 
 Created a BOS component on Near Protocol Blockchain that shows random jokes, the frontend is actually stored on chain 🫨

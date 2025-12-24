@@ -13,7 +13,7 @@ tech:
   - Azure-blob-storage
   - Azure-video-analyzer
 # company: ''
-showInProjects: True
+showInProjects: False
 ---
 
 A platform where individuals uploads video to understand sentiments, and behavioral polarity with other features like Person Identification, Caption generation, and more, using 3+ Azure Cloud services.

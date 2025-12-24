@@ -11,7 +11,7 @@ tech:
   - Wolframe
   - Alpha API
 # company: ''
-showInProjects: True
+showInProjects: False
 ---
 
 Inspired by Jarvis, It is a voice-based Virtual Assistant (desktop app) to perform a voice-based search, inter-language translation, opening desktop applications, control- volumes, Camera, reminder, etc.

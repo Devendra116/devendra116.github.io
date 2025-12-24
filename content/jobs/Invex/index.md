@@ -7,6 +7,6 @@ range: 'Sep 2022 - Jun 2023'
 url: 'https://testnet.invex.dev/'
 ---
 
-- Built smart contracts to create a DeFi infrastructure for buying and selling indexes consisting of different on-chain fungible tokens and worked on security audit for the smart contract
-- Integrated Invex smart contracts with Ref finance (decentralized exchange) smart contract for performing a token exchange, using async cross-contract calls and performed comprehensive testing for a token exchange.
-- Managed Hosting and added real-time index token price evaluation enhancing the functionality and user experience
+- Built smart contracts for DeFi infrastructure that enable creating, trading, and managing tokenized index portfolios on-chain.
+- Integrated smart contracts with Ref Finance DEX using async cross-contract calls, and wrote tests to prepare for security audits.
+- Built and maintained backend infrastructure with real-time price updates for accurate index valuation.
