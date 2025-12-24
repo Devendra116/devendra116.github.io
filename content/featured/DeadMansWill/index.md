@@ -1,5 +1,5 @@
 ---
-date: '0'
+date: '2'
 title: 'DeadMensWill'
 cover: './deadmanswill.png'
 external: 'https://deadmanswill.vercel.app/'
