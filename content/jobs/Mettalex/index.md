@@ -7,7 +7,8 @@ range: 'Aug 2023 - Present'
 url: 'https://mettalex.com/'
 ---
 
-- Built and deployed an agent-based cross-chain bridge from scratch, enabling the transfer of $1.8M worth of $MTLX from BSC to ETH, including the development of complete backend, 3 smart contracts, and serverless cloud functions.
-- Developed and deployed cross-chain smart contracts on Cosmos (Rust) and Ethereum (Solidity) for an agent-based P2P Decentralized Exchange, focusing on security and efficient cross-chain interactions.
-- Built backend systems using Node.js, Python, and serverless cloud functions, integrating WebSocket connections for real-time order book updates and trade execution.
-- Created automation scripts for performance testing to ensure system stability and reliability in production environments.
+- Built and deployed an agent-based cross-chain bridge from scratch, transferring `$1.8M worth of MTLX` tokens from BSC to Ethereum after the AnySwap bridge shutdown. Developed 3 smart contracts, complete backend infrastructure, and serverless cloud functions.
+- Developed 15+ smart contracts across EVM (Solidity) and Cosmos (Rust) chains for an agent-based P2P OrderBook DEX where users deposit into escrow, off-chain agents match trades, and contracts handle settlement.
+- Built Node.js and Python backend systems with webSocket integration for real-time orderbook updates coordinating agent logic and syncing on-chain/off-chain state.
+- Created custom blockchain indexers for EVM and Cosmos chains to track events and maintain cross-chain state consistency for agent decision-making and live trading graphs.
+- Stress-tested the system simulating up to 5,000 concurrent agents to identify bottlenecks and inform architecture improvements.
